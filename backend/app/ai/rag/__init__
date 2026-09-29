@@ -1,0 +1,9 @@
+import chromadb
+import os
+
+
+vector_db_path = os.getenv("VECTOR_DB", "vector_db")
+
+client = chromadb.PersistentClient(
+    path=str(vector_db_path)
+)
